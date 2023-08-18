@@ -30,4 +30,4 @@ console.log(myName+ ' ' +mobileNumber+ ' '+myHeight+' '+trueOrFalse+' '+ cars +'
 
 console.log(`${myName} ${mobileNumber} ${myHeight} ${trueOrFalse} ${cars} ${undefinedVariable} ${nullValue}`);
 
-alert('This is a alert message');
+window.alert('This is a alert message');

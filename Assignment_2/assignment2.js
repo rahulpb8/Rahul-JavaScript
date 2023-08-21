@@ -42,11 +42,12 @@ console.log(`Sum of array items is: ${sum} \n`);
 arrayFiltered = arr1.filter(function(item){
 return item!="3";
 });
+console.log("Array after filtering item 3");
 console.log(arrayFiltered);
 
 //1.f
 const arr2 = ["1", "2", "3", "4", "5", "6", "7"];
-
+console.log(`\nIterating and printing the array when the item is either "3" or "6" or "7"`)
 arr2.forEach(function(item){
     if (item ==3 || item == 6 || item == 7){
         console.log(arr2);
@@ -54,8 +55,10 @@ arr2.forEach(function(item){
 });
 
 //1.g
+console.log("\nComparing and console when the datatype matches of two arrays")
 var arr3 = [1, 2, "3", 4, 5, 6,"7"];
 var arr4 = ["1", "2", "3", "4", "5", "6", "7"];
+console.log(arr3,arr4);
 
 for(var i=0; i<=arr3.length-1;i++){
     let arr3value = arr3[i];

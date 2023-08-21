@@ -11,7 +11,9 @@ arr.forEach(function(item){
     const numberItem = Number(item);
     console.log(`value: ${item} datatype: ${typeof numberItem}`)
 });
+console.log("\n");
 
+//Deleting last 3 values of array
 arr.pop();
 arr.pop();
 arr.pop();

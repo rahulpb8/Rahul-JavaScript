@@ -36,9 +36,6 @@ window.addEventListener("load", timeoutAlert);
 
 function storeDetails(){
     const personalDetails = {name :'Rahul', Age : 22, gender : 'Male'};
-    // localStorage.setItem("name", 'Rahul');
-    // localStorage.setItem("Age", '22');
-    // localStorage.setItem("Gender", 'Male');
     var user;
     localStorage.setItem('user', JSON.stringify(personalDetails));
 }

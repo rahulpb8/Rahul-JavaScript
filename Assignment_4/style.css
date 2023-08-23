@@ -1,0 +1,22 @@
+#basic_info{
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    color: white;
+}
+
+.display{
+    border: 1px solid black;
+    padding: 2px;
+    width: 90px;
+    margin: 10px;
+    height: 20px;
+}
+
+#message{
+    border: 1px solid black;
+    padding: 2px;
+    width: 500px;
+    margin: 10px;
+    height: 20px;
+}

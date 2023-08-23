@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="height"></p>
+
+    <form id="personInfo">
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="phno">Phone: </label>
+        <input type="number" id="phno">
+        <br><br>
+        <label for="gender">Gender: </label>
+        <input type="text" id="gender">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <div id="basic_info">
+        <p class="info">Name: Rahul P Binu</p>
+        <p class="info">Age: 22</p>
+        <p class="info">Gender: Male</p>
+        <p class="info">Ph: 7025503248</p>
+    </div>
+    <button class="hide" onclick="hideFunction()">Hide</button>
+    <button class="bg_color" onclick="changeBg()">BG Color</button>
+    <button class="basic_details" onclick="detailsClick()">Details</button>
+
+    <br><br>
+
+    <label for="number">Choose a number: </label>
+    <select name="number" id="number" onchange="getOption()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <div id="message"></div>
+
+    <br><br>
+
+    <div id="buttonBox"></div>
+    <div class="display" id="printProgrammingLanguage"></div>
+
+    <!-- <button id="1" onclick="printProgrammingLanguage()">1</button>
+    <button id="2" onclick="printProgrammingLanguage()">2</button>
+    <button id="3" onclick="printProgrammingLanguage()">3</button>
+    <button id="4" onclick="printProgrammingLanguage()">4</button>
+    <button id="5" onclick="printProgrammingLanguage()">5</button>
+    <button id="6" onclick="printProgrammingLanguage()">6</button>
+    <button id="7" onclick="printProgrammingLanguage()">7</button>
+    <button id="8" onclick="printProgrammingLanguage()">8</button>
+    <button id="9" onclick="printProgrammingLanguage()">9</button>
+    <button id="10" onclick="printProgrammingLanguage()">10</button> -->
+
+    <br><br>
+
+    <form id="tabTitle">
+        <label for="tabTitleInput">Please type the tab title you want to make</label>
+        <input type="text" id="tabTitleInput" maxlength="50" required>
+        <p id="errorMessage" style="color: red;"></p>
+        <br>
+        <input type="submit">
+    </form>
+
+    <br><br>
+
+    <button id="redirect_button">Redirect to google</button>
+    <script src="assignment4.js">
+        
+    </script>
+</body>
+</html>

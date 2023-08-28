@@ -4,10 +4,15 @@
     const placeInput = document.getElementById("place");
     const companyInput = document.getElementById("company");
     const pinInput = document.getElementById("pincode");
+    const prePopulatedBtn = document.getElementById("prepopulatedButton");
 
     form.addEventListener('submit', (event) =>{
         event.preventDefault();
         checkInputs();
+        form.reset();
+    });
+    prePopulatedBtn.addEventListener('click', (event) =>{
+        event.preventDefault();
         const formData = JSON.parse(localStorage.getItem('formData'));
         if (formData) {
             nameInput.value = formData.name;
@@ -16,7 +21,6 @@
             companyInput.value = formData.company;
             pinInput.value = formData.pincode;
         }
-        form.reset();
     });
 
     function checkInputs() {
@@ -25,6 +29,8 @@
         const placeInputValue = placeInput.value.trim();
         const companyInputValue = companyInput.value.trim();
         const pinInputValue = pinInput.value.trim();
+
+        isValid = true;
 
         if(nameInputValue === ''){
             setErrorFor(nameInput, 'Name should not empty');
@@ -38,27 +44,32 @@
             setErrorFor(phoneInput, 'Phone number should be an integer');
             isValid = false
         }
-        else if(typeof phoneInputValue.length !== 10){
+        else if(phoneInputValue.length !== 10){
             setErrorFor(phoneInput, 'Phone number should be 10 integers');
             isValid = false
         }
        if(placeInputValue === '') {
             setErrorFor(placeInput, 'Place can not be blank, please enter place');
             isValid = false
-       }
+        }
        if(companyInputValue === '') {
             setErrorFor(companyInput, 'Company name is required');
             isValid = false
-       }
+        }
        if(pinInputValue ===''){
             setErrorFor(pinInput, 'Pincode is required');
             isValid = false
-       }
+        }
        else if(Number.isNaN(phoneInputValue)){
             setErrorFor(pinInput, 'Phone number should be an integer');
             isValid = false
-       }
+        }
 
+        if (isValid === true) {
+            const formData = {name : nameInputValue, place : placeInputValue, phone : phoneInputValue, company : companyInputValue, pincode : pinInputValue,};
+            localStorage.setItem('formData', JSON.stringify(formData));
+            form.reset();
+        }
     }
 
     function setErrorFor(input, message) {
@@ -69,10 +80,6 @@
 
         formControl.className = 'form-control error';
     }
-    if (isValid) {
-        const formData = {myname, place, phone, company, pincode,};
-        localStorage.setItem('formData', JSON.stringify(formData));
-        form.reset();
-    }
+    
 
    

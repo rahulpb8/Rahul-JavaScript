@@ -1,28 +1,28 @@
-var myName = 'Rahul';
+let myName = 'Rahul';
 console.log(myName);
 console.log('myName', typeof myName);
 
-var mobileNumber = 1234567890;
+let mobileNumber = 1234567890;
 console.log(mobileNumber);
 console.log('mobileNumber', typeof mobileNumber);
 
-var myHeight = 168.8;
+let myHeight = 168.8;
 console.log(myHeight);
 console.log('myHeight', typeof myHeight);
 
-var trueOrFalse = false;
+let trueOrFalse = false;
 console.log(trueOrFalse);
 console.log('trueOrFalse', typeof trueOrFalse);
 
-var cars = ['Polo', 'Civic', 'Swift', 'seltos'];
+let cars = ['Polo', 'Civic', 'Swift', 'seltos'];
 console.log(cars);
 console.log('cars', typeof cars);
 
-var undefinedVariable;
+let undefinedVariable;
 console.log(undefinedVariable);
 console.log('undefinedVariable', typeof undefinedVariable);
 
-var nullValue = null;
+let nullValue = null;
 console.log(nullValue);
 console.log('nullValue', typeof nullValue);
 

@@ -56,11 +56,11 @@ arr2.forEach(function(item){
 
 //1.g
 console.log("\nComparing and console when the datatype matches of two arrays")
-var arr3 = [1, 2, "3", 4, 5, 6,"7"];
-var arr4 = ["1", "2", "3", "4", "5", "6", "7"];
+let arr3 = [1, 2, "3", 4, 5, 6,"7"];
+let arr4 = ["1", "2", "3", "4", "5", "6", "7"];
 console.log(arr3,arr4);
 
-for(var i=0; i<=arr3.length-1;i++){
+for(let i=0; i<=arr3.length-1;i++){
     let arr3value = arr3[i];
     let arr4Value = arr4[i];
 
@@ -72,9 +72,9 @@ console.log("\n");
 
 
 //1.h
-var arr5 = [0,2,3,7,5,6,8];
+let arr5 = [0,2,3,7,5,6,8];
 
-for(var i=0; i<=arr5.length-1; i++){
+for(let i=0; i<=arr5.length-1; i++){
     let result = arr5[i]*i;
     
     if(result>40){

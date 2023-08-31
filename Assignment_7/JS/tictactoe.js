@@ -69,12 +69,9 @@ function checkWinner(currentClass) {
 }
 
 function isBoardFull() {
-    for(const cell of cells) {
-        if(cell.classList.contains('x') && cell.classList.contains('0')){
-            return true;
-        }
-    }
-    return false;
+    return [...cells].every(cell => {
+        return cell.classList.contains('x') || cell.classList.contains('o');
+    });
 }
 
 

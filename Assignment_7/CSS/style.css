@@ -13,11 +13,15 @@ body{
 .cell-container{
     display: grid;
     width: 90vw;
-    height: 80vh;
+    height: 60vh;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+h1 {
+    font-size: 50px;
+    color: brown;
 }
 .cell {
     border: 1px solid black;

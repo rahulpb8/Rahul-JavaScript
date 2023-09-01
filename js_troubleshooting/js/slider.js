@@ -1,3 +1,8 @@
+/*eslint linebreak-style: ["error", "unix"]*/
+
+//Debug the attached file and make it completely working without any errors.
+// Note down each step that you are doing to troubleshoot the issues in a file and push it along with the assignment.
+
 let a = ["1.jpg", "2.jpg", "3.jpg"];
 let selectedIndex = 0;
 

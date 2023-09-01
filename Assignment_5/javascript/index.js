@@ -1,3 +1,5 @@
+//2. Create a button and div using JS, when clicked on the button your basic details should be shown in the div. The static HTML file should only contain the basic HTML structure, no div/buttons.
+
 function showDetails() {
     const name = 'Rahul P Binu';
     const phone = 7025503248;

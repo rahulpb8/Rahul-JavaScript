@@ -61,16 +61,17 @@ let arr3 = [1, 2, "3", 4, 5, 6,"7"];
 let arr4 = ["1", "2", "3", "4", "5", "6", "7"];
 console.log(arr3,arr4);
 
+console.log('Result after comparing is');
 for(let i=0; i<=arr3.length-1;i++){
-    let arr3value = arr3[i];
-    let arr4Value = arr4[i];
-
-    if(typeof arr3value == typeof arr4Value){
-        console.log(`Datatype ${typeof arr3[i]} of first array item ${arr3[i]} equal to the datatype of second array item ${arr4[i]}`)
+    let arr3Value = arr3[i];
+    for(let j=0; j<=arr4.length-1; j++){
+        let arr4Value = arr4[j];
+        if(typeof arr3Value == typeof arr4Value){
+        console.log(`Datatype ${typeof arr3[i]} of first array item ${arr3Value} equal to the datatype of second array item ${arr4Value}`)
+        }
     }
 }
 console.log("\n");
-
 
 //1.h [0,2,3,7,5,6,8] iterate the array and multiply each item by its index value and console the result only if result is greater than 40.
 let arr5 = [0,2,3,7,5,6,8];

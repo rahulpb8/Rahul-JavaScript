@@ -1,3 +1,5 @@
+/*eslint linebreak-style: ["error", "unix"]*/
+
 //3 Create a private variable and console it by accessing it.
 
 class MyClass {

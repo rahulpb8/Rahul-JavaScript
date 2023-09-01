@@ -1,4 +1,4 @@
-//3
+//3 Create a private variable and console it by accessing it.
 
 class MyClass {
     #privateVariable = "Private variable value";
@@ -15,7 +15,7 @@ obj.setValue("Value changed");
 console.log(obj.getValue());
 
 
-//4
+//4 Create a static variable and console it by accessing it.
 
 class MyClass2 {
     static staticVariable = 'I am Rahul';

@@ -122,5 +122,7 @@ let ofCount = string.match(/of/g).length;
 console.log("the: "+theCount+", of: "+ofCount+'\n');
 
 //j pad string with "*" and set the total length of the string as 30, displayed at right side.
-let padText = string.padStart(40, "*");
+let trimmedString = string.slice(0, 29);
+let padText = trimmedString.padEnd(30, "*");
 console.log(padText+'\n');
+console.log('Length of the string is '+padText.length);

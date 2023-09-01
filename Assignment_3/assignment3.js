@@ -4,7 +4,7 @@
 //console each item by using switch statement.
 //var arr1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
 
-var result=arr1.map(function(item){
+let result=arr1.map(function(item){
     switch (arr1.indexOf(item)){
         case arr1.indexOf(item):
             console.log(item);
@@ -76,7 +76,7 @@ console.log('\n');
 // 7. { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
 // From the given object remove the data array item with id as '24'. (consider that the data arrays order will be different 
 // every time you get, so write code in such a way that given any object it will remove the item with id as 24 if it exists )
-var obj1 = { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
+let obj1 = { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
 const indexOfObject = obj1.data.findIndex(function(object){
     return object.id ==='24';
 });
@@ -87,11 +87,11 @@ console.log(obj1);
 console.log('\n');
 //8. Given var string = "Javascript is the King of the web."
 //a Get the length of the string.
-var string = "Javascript is the King of the web"
+let string = "Javascript is the King of the web"
 console.log(`Length of the string is: ${string.length}\n`);
 
 //b  Print the 8th character of the string without using any function
-var character = string[7];
+let character = string[7];
 console.log(character+"\n");
 
 //c Execute the above code from browser console.
@@ -100,20 +100,20 @@ console.log(character+"\n");
 console.log("Position of the word King in string is "+string.search("King")+"\n");
 
 //e Replace "King" with "Emperor".
-var replacedString = string.replace("King", "Emperor");
+let replacedString = string.replace("King", "Emperor");
 console.log(replacedString+'\n');
 
 //f Insert the string "new” before the word "King".
-var newString = string.replace("King", "new King");
+let newString = string.replace("King", "new King");
 console.log(newString+'\n');
 
 //g Get the words in string as an array.
-var arr2 = string.split(' ');
+let arr2 = string.split(' ');
 console.log(arr2);
 console.log('\n');
 
 //h Extract and print the words "is the King" from string.
-var subString = string.substring(11, 22);
+let subString = string.substring(11, 22);
 console.log(subString+'\n');
 
 //i Get the count of occurrences of the strings "the" and "of" in string.

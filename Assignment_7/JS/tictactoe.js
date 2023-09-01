@@ -1,7 +1,7 @@
 /*eslint linebreak-style: ["error", "unix"]*/
 
-//Create a tic tac toe game in JS, don't copy the code from any online source, and develop with 
-// your logic.  Play the game from Google to develop the logic, no need to refer to any algorithms or videos.
+//Create a tic tac toe game in JS, don't copy the code from any online source, and develop with your logic.
+// Play the game from Google to develop the logic, no need to refer to any algorithms or videos.
 
 let oTurn;
 const cells = document.querySelectorAll('.cell');

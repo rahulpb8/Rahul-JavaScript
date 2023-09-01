@@ -1,3 +1,7 @@
+/*eslint linebreak-style: ["error", "unix"]*/
+
+//Create a JSON server to store your basic details, and use AJAX to fetch the data. Display the data in a presentable form on the web page after fetching.
+
 let xhr = new XMLHttpRequest();
 xhr.open('get','https://github.com/rahulpb8/JSON.git');
 

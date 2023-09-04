@@ -1,5 +1,6 @@
 
 //9. When the control+enter key is pressed show an alert message.
+
 function keyPress(event) {
     if(event.ctrlKey && event.key === 'Enter'){
         window.alert('Pressed ctrl+enter');
@@ -44,8 +45,6 @@ window.addEventListener('load', timeoutAlert);
 
 //2. Store your basic details in local storage of the browser every time the page loads,
 // then console them and finally delete them after 1 minute of the page load. 
-
-//2 Store your basic details in local storage of the browser every time the page loads, then console them and finally delete them after 1 minute of the page load. 
 
 function storeDetails(){
     const personalDetails = {name :'Rahul', Age : 22, gender : 'Male'};
@@ -136,7 +135,6 @@ function detailsClick(){
 
 details_button.addEventListener('click' ,detailsClick);
 
-
 //7. Consider an array with names of 10 programming languages, make 10 buttons by iterating this array,
 // when clicked on each button the name of the programming language should be shown in a corresponding div. 
 
@@ -165,6 +163,7 @@ languages.forEach(function(lang) {
 
 let number = document.getElementById('number');
 let divText = document.getElementById('message');
+// eslint-disable-next-line no-unused-vars
 function getOption(){
     let selectedValue = parseInt(number.value);
     if(selectedValue === 9){
@@ -186,7 +185,6 @@ divText.addEventListener('mouseout', function(){
 //8. Create a form with a text field which when submitted, will change the tab title to whatever is entered,
 // limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
 
-
 function changeTabTitle(){
     let newTitle = document.getElementById('tabTitleInput').value;
     if(newTitle.length > 0 && newTitle.length <= 50){
@@ -199,4 +197,3 @@ function changeTabTitle(){
 }
 let formTitle = document.getElementById('tabTitle');
 formTitle.addEventListener('submit', changeTabTitle());
-

@@ -135,7 +135,6 @@ function detailsClick(){
 
 details_button.addEventListener('click' ,detailsClick);
 
-
 //7. Consider an array with names of 10 programming languages, make 10 buttons by iterating this array,
 // when clicked on each button the name of the programming language should be shown in a corresponding div. 
 

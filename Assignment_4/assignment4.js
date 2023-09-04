@@ -17,7 +17,7 @@ function displayScreenHeight(){
 }
 window.addEventListener('DOMContentLoaded', displayScreenHeight);
 
-//1.b. To console the name of the web host
+//1.b To console the name of the web host
 
 function displayHostName(){
     let hostName = window.location.hostname;
@@ -25,7 +25,7 @@ function displayHostName(){
 }
 displayHostName();
 
-//1.c. To show a warning message if there is no https protocol used in the visited website.
+//1.c To show a warning message if there is no https protocol used in the visited website.
 
 function checkProtocol(){
     if(window.location.protocol !== 'https:'){
@@ -34,7 +34,7 @@ function checkProtocol(){
 }
 window.addEventListener('load', checkProtocol);
 
-//1.d. To show an alert message after 10sec while the page is refreshed.
+//1.d To show an alert message after 10sec while the page is refreshed.
 
 function timeoutAlert(){
     setTimeout(function(){
@@ -45,6 +45,7 @@ window.addEventListener('load', timeoutAlert);
 //2. Store your basic details in local storage of the browser every time the page loads,
 // then console them and finally delete them after 1 minute of the page load. 
 
+//2 Store your basic details in local storage of the browser every time the page loads, then console them and finally delete them after 1 minute of the page load. 
 
 function storeDetails(){
     const personalDetails = {name :'Rahul', Age : 22, gender : 'Male'};
@@ -65,7 +66,7 @@ function removePersonalDetails(){
 }
 setTimeout(removePersonalDetails, 60000);
 
-//3. Create a form and submit button, on click of the button store your basic details from the form in the cookies.
+//3 Create a form and submit button, on click of the button store your basic details from the form in the cookies.
 
 let today = new Date();
 let expiry = new Date(today.getTime()+ 30 * 24 * 3600 * 1000);
@@ -92,14 +93,14 @@ function formSubmit(){
 let form = document.getElementById('personInfo');
 form.addEventListener('submit', formSubmit);
 
-//4. Redirect to the homepage of google from the console.
+//4 Redirect to the homepage of google from the console.
 
 document.getElementById('redirect_button').addEventListener('click', function() {
     window.location.assign('https://www.google.com/');
 });
 
-//5.a. Create a div with background color red, create buttons
-//to hide the div
+//5. Create a div with background color red, create buttons
+//5.a to hide the div
 
 let hideDiv = document.getElementById('hide');
 function hideFunction(){
@@ -108,7 +109,7 @@ function hideFunction(){
 }
 hideDiv.addEventListener('click', hideFunction);
  
-//5.b. to change the background color of the div
+//5.b to change the background color of the div
 
 let changeBgButton = document.getElementById('bg_color');
 function changeBg(){
@@ -168,7 +169,7 @@ function getOption(){
     let selectedValue = parseInt(number.value);
     if(selectedValue === 9){
         number.value = '10';
-        divText.innerText = '9 is fully occuppied, please select another number';
+        divText.innerText = '9 is fully occupied, please select another number';
     }
     else{
         divText.innerText = `You selected ${selectedValue}`;
@@ -182,9 +183,14 @@ divText.addEventListener('mouseout', function(){
 });
 // number.addEventListener('change', getOption())
 
+<<<<<<< HEAD
 //8. Create a form with a text field which when submitted, will change the tab title to whatever is entered,
 // limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
 
+=======
+//8 Create a form with a text field which when submitted, will change the tab title to whatever is entered,
+// limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
+>>>>>>> origin/Assignment_4
 
 function changeTabTitle(){
     let newTitle = document.getElementById('tabTitleInput').value;
@@ -199,3 +205,15 @@ function changeTabTitle(){
 let formTitle = document.getElementById('tabTitle');
 formTitle.addEventListener('submit', changeTabTitle());
 
+<<<<<<< HEAD
+=======
+
+//9 When the control+enter key is pressed show an alert message.
+function keyPress(event) {
+if(event.ctrlKey && event.key == 'Enter'){
+    window.alert("Pressed ctrl+enter");
+}
+
+}
+document.addEventListener("keydown", keyPress);
+>>>>>>> origin/Assignment_4

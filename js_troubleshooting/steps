@@ -1,0 +1,13 @@
+Step 1. Changed spelling "getElementsById" to "getElementById".
+Step 2. Changed id="imgs" to id="img"
+Step 2. Changed the declaration of variable from const to let.
+Step 4. Added a '/' after './images' as './images/' in the js file.
+Step 5. Put single quotes('') for value = in two if consitions as if(type === '0') and if(selectedIndex <= '0').
+        Previously it is if(type === 0) and if (selectedIndex <= 0)
+Step 5. Removed an '=' from the if condition: if (selectedIndex < '0')
+        Previously it is if (selectedIndex <= 0)
+Step 6. Added script tag inside the body of html file insted of giving in the head tag.
+Step 7. Gave curly brackets for else as 
+        else{
+            selectedIndex++;
+        }

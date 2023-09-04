@@ -183,14 +183,9 @@ divText.addEventListener('mouseout', function(){
 });
 // number.addEventListener('change', getOption())
 
-<<<<<<< HEAD
 //8. Create a form with a text field which when submitted, will change the tab title to whatever is entered,
 // limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
 
-=======
-//8 Create a form with a text field which when submitted, will change the tab title to whatever is entered,
-// limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
->>>>>>> origin/Assignment_4
 
 function changeTabTitle(){
     let newTitle = document.getElementById('tabTitleInput').value;
@@ -205,15 +200,3 @@ function changeTabTitle(){
 let formTitle = document.getElementById('tabTitle');
 formTitle.addEventListener('submit', changeTabTitle());
 
-<<<<<<< HEAD
-=======
-
-//9 When the control+enter key is pressed show an alert message.
-function keyPress(event) {
-if(event.ctrlKey && event.key == 'Enter'){
-    window.alert("Pressed ctrl+enter");
-}
-
-}
-document.addEventListener("keydown", keyPress);
->>>>>>> origin/Assignment_4

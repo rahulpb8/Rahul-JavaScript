@@ -1,6 +1,6 @@
+/*eslint linebreak-style: ["error", "unix"]*/
 
 //9. When the control+enter key is pressed show an alert message.
-
 function keyPress(event) {
     if(event.ctrlKey && event.key === 'Enter'){
         window.alert('Pressed ctrl+enter');
@@ -94,17 +94,25 @@ form.addEventListener('submit', formSubmit);
 
 //4 Redirect to the homepage of google from the console.
 
-document.getElementById('redirect_button').addEventListener('click', function() {
-    window.location.assign('https://www.google.com/');
-});
+// console.log(window.location.assign('https://www.google.com/'));
+
 
 //5. Create a div with background color red, create buttons
 //5.a to hide the div
 
 let hideDiv = document.getElementById('hide');
+let isDivHide = true;
 function hideFunction(){
     let element = document.getElementById('basic_info');
-    element.style.display = 'none';
+    if(isDivHide == false){
+        element.style.display = 'block';
+        isDivHide = true;
+    }
+    else{
+        element.style.display = 'none';
+        isDivHide = false;
+    }
+    
 }
 hideDiv.addEventListener('click', hideFunction);
  
@@ -185,15 +193,15 @@ divText.addEventListener('mouseout', function(){
 //8. Create a form with a text field which when submitted, will change the tab title to whatever is entered,
 // limit the field to 50 characters, otherwise show an error message, and stay on the same page when submitted(it shouldn't refresh).
 
-function changeTabTitle(){
+let formTitle = document.getElementById('tabTitle');
+formTitle.addEventListener('submit', function(event){
+    event.preventDefault();
     let newTitle = document.getElementById('tabTitleInput').value;
-    if(newTitle.length > 0 && newTitle.length <= 50){
+    if(newTitle.length > '0' && newTitle.length <= '50'){
         document.title = newTitle;
     }
     else{
         document.getElementById('errorMessage').innerHTML = 'Provide minimum 1 and maximum 50 characters';
     }
     return false;
-}
-let formTitle = document.getElementById('tabTitle');
-formTitle.addEventListener('submit', changeTabTitle());
+});

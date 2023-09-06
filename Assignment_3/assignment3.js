@@ -2,19 +2,19 @@
 
 //1. ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ] : Use switch statement inside a map function and 
 //console each item by using switch statement.
-//var arr1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
+let arr1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
 
-let result=arr1.map(function(item){
+arr1.map(function(item){
     switch (arr1.indexOf(item)){
-        case arr1.indexOf(item):
-            console.log(item);
-            break;
-        case 'default':
-            console.log(item);
-            break;
+    case arr1.indexOf(item):
+        console.log(item);
+        break;
+    case 'default':
+        console.log(item);
+        break;
     }
 });
-console.log("\n");
+console.log('\n');
 
 //2. [1, 2, 3, 4. 5, 6] : Write a closure function to delete indexes 5 and 2 of this array.
 let myArray = [1, 2, 3, 4, 5, 6];
@@ -56,12 +56,12 @@ function arrayFunction(arr, value){
     console.log(arr)
 }
 const myArray4 = ['suresh', 'ramesh', 34, 'kannur'];
-arrayFunction(myArray4, "suru");
+arrayFunction(myArray4, 'suru');
 
 console.log('\n');
 //5. Create a self-invoking function to console you name.
 (function(){
-    console.log("Rahul");
+    console.log('Rahul');
 }());
 
 console.log('\n');
@@ -87,24 +87,24 @@ console.log(obj1);
 console.log('\n');
 //8. Given var string = "Javascript is the King of the web."
 //a Get the length of the string.
-let string = "Javascript is the King of the web"
+let string = 'Javascript is the King of the web'
 console.log(`Length of the string is: ${string.length}\n`);
 
 //b  Print the 8th character of the string without using any function
 let character = string[7];
-console.log(character+"\n");
+console.log(character+'\n');
 
 //c Execute the above code from browser console.
 
 //d Get the position of the word "King" in string.
-console.log("Position of the word King in string is "+string.search("King")+"\n");
+console.log('Position of the word King in string is '+string.search('King')+'\n');
 
 //e Replace "King" with "Emperor".
-let replacedString = string.replace("King", "Emperor");
+let replacedString = string.replace('King', 'Emperor');
 console.log(replacedString+'\n');
 
 //f Insert the string "new” before the word "King".
-let newString = string.replace("King", "new King");
+let newString = string.replace('King', 'new King');
 console.log(newString+'\n');
 
 //g Get the words in string as an array.
@@ -119,10 +119,10 @@ console.log(subString+'\n');
 //i Get the count of occurrences of the strings "the" and "of" in string.
 let theCount = string.match(/the/g).length;
 let ofCount = string.match(/of/g).length;
-console.log("the: "+theCount+", of: "+ofCount+'\n');
+console.log('the: '+theCount+', of: '+ofCount+'\n');
 
 //j pad string with "*" and set the total length of the string as 30, displayed at right side.
 let trimmedString = string.slice(0, 29);
-let padText = trimmedString.padEnd(30, "*");
+let padText = trimmedString.padEnd(30, '*');
 console.log(padText+'\n');
 console.log('Length of the string is '+padText.length);

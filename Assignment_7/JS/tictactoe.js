@@ -41,6 +41,9 @@ function handleClick(e){
 
     if(checkWinner(currentClass)) {
         endMatch(false);
+        cells.forEach(cell => {
+            cell.removeEventListener('click', handleClick);
+        });
     }
     else if(isBoardFull()) {
         endMatch(true); 

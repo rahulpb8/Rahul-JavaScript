@@ -55,7 +55,6 @@ function placeMark(cell, currentClass) {
     cell.classList.add(currentClass);
 }
 
-
 function swapTurns(){
     if(oTurn) {
         oTurn = false;

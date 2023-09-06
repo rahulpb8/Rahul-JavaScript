@@ -1,3 +1,5 @@
+/*eslint linebreak-style: ["error", "unix"]*/
+
 //9. When the control+enter key is pressed show an alert message.
 function keyPress(event) {
     if(event.ctrlKey && event.key === 'Enter'){

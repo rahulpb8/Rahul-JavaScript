@@ -1,19 +1,22 @@
-//1.
-var arr1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
+/*eslint linebreak-style: ["error", "unix"]*/
 
-var result=arr1.map(function(item){
+//1. ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ] : Use switch statement inside a map function and 
+//console each item by using switch statement.
+let arr1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
+
+arr1.map(function(item){
     switch (arr1.indexOf(item)){
-        case arr1.indexOf(item):
-            console.log(item);
-            break;
-        case 'default':
-            console.log(item);
-            break;
+    case arr1.indexOf(item):
+        console.log(item);
+        break;
+    case 'default':
+        console.log(item);
+        break;
     }
 });
-console.log("\n");
+console.log('\n');
 
-//2
+//2. [1, 2, 3, 4. 5, 6] : Write a closure function to delete indexes 5 and 2 of this array.
 let myArray = [1, 2, 3, 4, 5, 6];
 function deleteIndex(array){
     function deleteValues(){
@@ -27,7 +30,7 @@ const newMyArray = deleteIndex(myArray);
 newMyArray();
 
 console.log('\n');
-//3
+//3. Use constructor method to console all elements of the passed array. (the array will be passed to the constructor method)
 class ArrayValues {
     constructor(arrInput) {
         this.array = arrInput;
@@ -39,7 +42,10 @@ const myArr = new ArrayValues(myArray3)
 console.log(myArr.array);
 
 console.log('\n');
-//4
+// 4. Create a function that takes 2 arguments, 1st argument being any array of items, 2nd being any one
+// of the item name either in the passed array or not in the passed array, the function should delete the 
+// passed item if it exists in the array, if it doesn't exist then the item should be inserted into the array, 
+// finnally console the output.
 function arrayFunction(arr, value){
     if(!arr.includes(value)){
         arr.push(value);
@@ -50,16 +56,16 @@ function arrayFunction(arr, value){
     console.log(arr)
 }
 const myArray4 = ['suresh', 'ramesh', 34, 'kannur'];
-arrayFunction(myArray4, "suru");
+arrayFunction(myArray4, 'suru');
 
 console.log('\n');
-//5
+//5. Create a self-invoking function to console you name.
 (function(){
-    console.log("Rahul");
+    console.log('Rahul');
 }());
 
 console.log('\n');
-//6
+//6. {a:'one', b:'2', f:'5', c:'33', p:'do', q:'one' }: Using this object make an array consisting of all the keys of the given object in reverse order. (output should be ['q', 'p', 'c', 'f', 'b', 'a'])
 const obj = {a:'one', b:'2', f:'5', c:'33', p:'do', q:'one' };
 let myArray2 = Object.keys(obj);
 let reverseMyArray2 = myArray2.reverse();
@@ -67,8 +73,10 @@ console.log(reverseMyArray2);
 
 console.log('\n');
 
-//7
-var obj1 = { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
+// 7. { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
+// From the given object remove the data array item with id as '24'. (consider that the data arrays order will be different 
+// every time you get, so write code in such a way that given any object it will remove the item with id as 24 if it exists )
+let obj1 = { data: [{a:'one', id:'22'}, {a:'four', id:'7'}, {a:'six', b:'2'},  {a:'sixty', id:'24'},  {a:'five', id:'212'}] }
 const indexOfObject = obj1.data.findIndex(function(object){
     return object.id ==='24';
 });
@@ -77,42 +85,44 @@ obj1.data.splice(indexOfObject, 1);
 console.log(obj1);
 
 console.log('\n');
-//8
-//a
-var string = "Javascript is the King of the web"
+//8. Given var string = "Javascript is the King of the web."
+//a Get the length of the string.
+let string = 'Javascript is the King of the web'
 console.log(`Length of the string is: ${string.length}\n`);
 
-//b
-var character = string[7];
-console.log(character+"\n");
+//b  Print the 8th character of the string without using any function
+let character = string[7];
+console.log(character+'\n');
 
-//c
+//c Execute the above code from browser console.
 
-//d
-console.log("Position of the word King in string is "+string.search("King")+"\n");
+//d Get the position of the word "King" in string.
+console.log('Position of the word King in string is '+string.search('King')+'\n');
 
-//e
-var replacedString = string.replace("King", "Emperor");
+//e Replace "King" with "Emperor".
+let replacedString = string.replace('King', 'Emperor');
 console.log(replacedString+'\n');
 
-//f
-var newString = string.replace("King", "new King");
+//f Insert the string "new” before the word "King".
+let newString = string.replace('King', 'new King');
 console.log(newString+'\n');
 
-//g
-var arr2 = string.split(' ');
+//g Get the words in string as an array.
+let arr2 = string.split(' ');
 console.log(arr2);
 console.log('\n');
 
-//h
-var subString = string.substring(11, 22);
+//h Extract and print the words "is the King" from string.
+let subString = string.substring(11, 22);
 console.log(subString+'\n');
 
-//i
+//i Get the count of occurrences of the strings "the" and "of" in string.
 let theCount = string.match(/the/g).length;
 let ofCount = string.match(/of/g).length;
-console.log("the: "+theCount+", of: "+ofCount+'\n');
+console.log('the: '+theCount+', of: '+ofCount+'\n');
 
-//j
-let padText = string.padStart(40, "*");
+//j pad string with "*" and set the total length of the string as 30, displayed at right side.
+let trimmedString = string.slice(0, 29);
+let padText = trimmedString.padEnd(30, '*');
 console.log(padText+'\n');
+console.log('Length of the string is '+padText.length);

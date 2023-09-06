@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cell-container{
+    display: grid;
+    width: 90vw;
+    height: 60vh;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#heading {
+    font-size: 50px;
+    color: brown;
+}
+.cell {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell:first-child, :nth-child(2), :nth-child(3) {
+    border-top: none;
+}
+.cell:first-child, :nth-child(4), :nth-child(7) {
+    border-left: none;
+}
+.cell:nth-child(3), :nth-child(6), :nth-child(9) {
+    border-right: none;
+}
+.cell:nth-child(7), :nth-child(8), :nth-child(9) {
+    border-bottom: none;
+}
+.cell.x::before, .cell.x::after{
+    content: '';
+    width: 10px;
+    position: absolute;
+    height: 90px;
+    background-color: black;
+}
+.cell.x::before {
+    transform: rotate(45deg);
+}
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+.cell.o::before, .cell.o::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: black;
+}
+.cell.o::before {
+    border-radius: 50%;
+}
+.cell.o::after {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}

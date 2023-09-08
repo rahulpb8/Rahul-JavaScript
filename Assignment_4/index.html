@@ -8,7 +8,7 @@
 </head>
 <body>
     <p id="height"></p>
-
+    
     <form id="personInfo">
         <label for="name">Name: </label>
         <input type="text" id="name">
@@ -26,14 +26,16 @@
     </form>
 
     <div id="basic_info">
-        <p class="info">Name: Rahul P Binu</p>
-        <p class="info">Age: 22</p>
-        <p class="info">Gender: Male</p>
-        <p class="info">Ph: 7025503248</p>
+        <div id="info">
+            <p class="insideinfo">Name: Rahul P Binu</p>
+            <p class="insideinfo">Age: 22</p>
+            <p class="insideinfo">Gender: Male</p>
+            <p class="insideinfo">Ph: 7025503248</p>
+        </div>
     </div>
-    <button class="hide" onclick="hideFunction()">Hide</button>
-    <button class="bg_color" onclick="changeBg()">BG Color</button>
-    <button class="basic_details" onclick="detailsClick()">Details</button>
+    <button id="hide">Hide</button>
+    <button id="bg_color">BG Color</button>
+    <button id="basic_details">Details</button>
 
     <br><br>
 
@@ -61,15 +63,12 @@
 
     <form id="tabTitle">
         <label for="tabTitleInput">Please type the tab title you want to make</label>
-        <input type="text" id="tabTitleInput" maxlength="50" required>
+        <input type="text" id="tabTitleInput" required>
         <p id="errorMessage" style="color: red;"></p>
         <br>
         <input type="submit">
     </form>
 
-    <br><br>
-
-    <button id="redirect_button">Redirect to google</button>
     <script src="assignment4.js">
         
     </script>

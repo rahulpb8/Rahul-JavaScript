@@ -16,9 +16,7 @@ xhr.onreadystatechange = function() {
             let html_content = "";
             for(let i=0; i<result_data.length;i++){
                 let current_record = result_data[i];
-
-                html_content = html_content+'<tr><td>'+current_record.id+'</td> <td>'+current_record.name+'</td> <td>'+current_record.username+'</td> <td>'+current_record.email+'</td> </tr>';
-
+                html_content = html_content+'<tr><td>'+current_record.id+      '</td> <td>'+current_record.name+'</td> <td>'+current_record.username+ '</td> <td>'+current_record.email+'</td> </tr>';
             }
             document.getElementById('result_area').innerHTML = html_content;
         }
@@ -27,4 +25,3 @@ xhr.onreadystatechange = function() {
         }
     }
 }
-

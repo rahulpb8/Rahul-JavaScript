@@ -1,3 +1,8 @@
+/*eslint linebreak-style: ["error", "unix"]*/
+
+//Create a tic tac toe game in JS, don't copy the code from any online source, and develop with your logic.
+// Play the game from Google to develop the logic, no need to refer to any algorithms or videos.
+
 let oTurn;
 let cells = document.querySelectorAll('.cell');
 const matchStatus = document.getElementById('status');
@@ -30,6 +35,7 @@ function handleClick(e){
         }
         placeMark(cell, currentClass);
 
+
         if(checkWinner(currentClass)) {
             endMatch(false);
             cells.forEach(cell => {
@@ -46,7 +52,6 @@ function handleClick(e){
 function placeMark(cell, currentClass) {
     cell.classList.add(currentClass);
 }
-
 
 function swapTurns(){
     if(oTurn) {
@@ -98,6 +103,7 @@ function isBoardFull() {
         }
     }
     return boardIsFull;
+
 }
 
 

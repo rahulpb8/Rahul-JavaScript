@@ -3,7 +3,7 @@
 //3 Create a private variable and console it by accessing it.
 
 class MyClass {
-    #privateVariable = "Private variable value";
+    #privateVariable = 'Private variable value';
     getValue(){
         return this.#privateVariable;
     }
@@ -13,7 +13,7 @@ class MyClass {
 }
 let obj = new MyClass();
 console.log(obj.getValue());
-obj.setValue("Value changed");
+obj.setValue('Value changed');
 console.log(obj.getValue());
 
 

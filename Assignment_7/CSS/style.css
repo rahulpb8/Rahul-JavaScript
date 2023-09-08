@@ -3,6 +3,7 @@
 }
 body{
     margin: 0;
+    display: flex;
 }
 .game-container{
     display: flex;
@@ -12,7 +13,7 @@ body{
 }
 .cell-container{
     display: grid;
-    width: 90vw;
+    width: 70vw;
     height: 60vh;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
@@ -73,3 +74,26 @@ body{
     border-radius: 50%;
     background-color: white;
 }
+.button {
+    background-color:#0a0a23;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius:5px;
+  }
+.player-names{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input[type=text] {
+    width: 70%;
+    border: 3px solid red;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

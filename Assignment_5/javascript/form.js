@@ -40,40 +40,40 @@
         const companyInputValue = companyInput.value.trim();
         const pinInputValue = pinInput.value.trim();
 
-        isValid = true;
+    let isValid = true;
 
-        if(nameInputValue === ''){
-            setErrorFor(nameInput, 'Name should not empty');
-            isValid = false
-        }
-        if(phoneInputValue === null || phoneInputValue === '') {
-            setErrorFor(phoneInput, 'Phone number can not be blank');
-            isValid = false
-        }
-        else if(Number.isNaN(phoneInputValue)){
-            setErrorFor(phoneInput, 'Phone number should be an integer');
-            isValid = false
-        }
-        else if(phoneInputValue.length !== 10){
-            setErrorFor(phoneInput, 'Phone number should be 10 integers');
-            isValid = false
-        }
-       if(placeInputValue === '') {
-            setErrorFor(placeInput, 'Place can not be blank, please enter place');
-            isValid = false
-        }
-       if(companyInputValue === '') {
-            setErrorFor(companyInput, 'Company name is required');
-            isValid = false
-        }
-       if(pinInputValue ===''){
-            setErrorFor(pinInput, 'Pincode is required');
-            isValid = false
-        }
-       else if(Number.isNaN(phoneInputValue)){
-            setErrorFor(pinInput, 'Phone number should be an integer');
-            isValid = false
-        }
+    if(nameInputValue === ''){
+        setErrorFor(nameInput, 'Name should not empty');
+        isValid = false;
+    }
+    if(phoneInputValue === null || phoneInputValue === '') {
+        setErrorFor(phoneInput, 'Phone number can not be blank');
+        isValid = false;
+    }
+    else if(Number.isNaN(phoneInputValue)){
+        setErrorFor(phoneInput, 'Phone number should be an integer');
+        isValid = false;
+    }
+    else if(phoneInputValue.length !== 10){
+        setErrorFor(phoneInput, 'Phone number should be 10 integers');
+        isValid = false;
+    }
+    if(placeInputValue === '') {
+        setErrorFor(placeInput, 'Place can not be blank, please enter place');
+        isValid = false;
+    }
+    if(companyInputValue === '') {
+        setErrorFor(companyInput, 'Company name is required');
+        isValid = false;
+    }
+    if(pinInputValue ===''){
+        setErrorFor(pinInput, 'Pincode is required');
+        isValid = false;
+    }
+    else if(Number.isNaN(phoneInputValue)){
+        setErrorFor(pinInput, 'Phone number should be an integer');
+        isValid = false;
+    }
 
 //1.d. On submission of the form, store the details in the local storage and clear the form. (it should stay on the same page don't refresh the page)
         if (isValid === true) {
@@ -82,15 +82,16 @@
             form.reset();
         }
     }
+}
 
-    function setErrorFor(input, message) {
-        const formControl = input.parentElement;
-        const small = formControl.querySelector('small');
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
 
-        small.innerText = message;
+    small.innerText = message;
 
-        formControl.className = 'form-control error';
-    }
+    formControl.className = 'form-control error';
+}
     
 
    
